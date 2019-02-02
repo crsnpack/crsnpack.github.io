@@ -18,7 +18,7 @@ var apiKey = "c78d73dcfe79494ca4152a4cfdb86411";
 loadData();
  
 function loadData() {
-  request.open('GET', 'https://www.bungie.net/platform/app/oauth/token/');
+  request.open('GET', "https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/", true);
   request.setRequestHeader("X-API-Key", apiKey);
   request.onload = loadComplete;
   request.send();
