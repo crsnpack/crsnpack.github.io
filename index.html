@@ -10,6 +10,22 @@
     <script>
     var title = document.getElementById('dive');
     title.textContent = 'CRSNPACK';  
+var data;
+var request = new XMLHttpRequest();
+ 
+loadData();
+ 
+function loadData() {
+  request.open('GET', 'https://www.bungie.net/Platform');
+  request.onload = loadComplete;
+  request.send();
+}
+ 
+function loadComplete(evt) {
+  data = JSON.parse(request.responseText);
+  console.log(data);
+}
+
     </script>
 </head>
 <body>
