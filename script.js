@@ -1,1 +1,2 @@
-console.log('Hello World');
+var title = document.getElementById('dive');
+title.textContent = 'CRSNPACK';
